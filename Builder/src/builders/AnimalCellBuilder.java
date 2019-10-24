@@ -1,11 +1,16 @@
 package builders;
 
+import cells.AnimalCell;
 import organelles.AnimalVacuoles;
 
 public class AnimalCellBuilder extends CellBuilder{
 
-    AnimalCellBuilder(){
+    public AnimalCellBuilder(){
         super();
+    }
+
+    public AnimalCell build(){
+        return new AnimalCell(this);
     }
 
     public AnimalCellBuilder setAnimalVacuoles(boolean animalVacuoles){
@@ -14,4 +19,5 @@ public class AnimalCellBuilder extends CellBuilder{
         }
         return this;
     }
+
 }

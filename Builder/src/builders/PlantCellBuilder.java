@@ -1,5 +1,6 @@
 package builders;
 
+import cells.PlantCell;
 import organelles.CellWall;
 import organelles.Chloroplasts;
 import organelles.PlantVacuoles;
@@ -8,6 +9,10 @@ public class PlantCellBuilder extends CellBuilder{
 
     PlantCellBuilder(){
         super();
+    }
+
+    public PlantCell build(PlantCellBuilder builder){
+        return new PlantCell(this);
     }
 
     public PlantCellBuilder setCellWall(boolean cellWall) {

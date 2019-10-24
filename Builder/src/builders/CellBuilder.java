@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CellBuilder{
-    protected List<Organelle> organelleList;
+    List<Organelle> organelleList;
 
     CellBuilder() {
         organelleList = new ArrayList<>();
@@ -14,6 +14,10 @@ public class CellBuilder{
 
     public void showOrganelles() {
         System.out.println(organelleList.toString());
+    }
+
+    public List<Organelle> getOrganelleList(){
+        return this.organelleList;
     }
 
     // cell membrane

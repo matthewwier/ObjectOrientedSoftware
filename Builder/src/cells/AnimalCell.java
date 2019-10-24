@@ -2,8 +2,10 @@ package cells;
 
 import builders.AnimalCellBuilder;
 
-public class AnimalCell {
+public class AnimalCell extends Cell {
 
-    private AnimalCell(AnimalCellBuilder builder){
+    public AnimalCell(AnimalCellBuilder builder) {
+        organelleList = builder.getOrganelleList();
     }
+
 }

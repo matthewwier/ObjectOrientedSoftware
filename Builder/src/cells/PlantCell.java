@@ -1,4 +1,10 @@
 package cells;
 
-public class PlantCell {
+import builders.PlantCellBuilder;
+
+public class PlantCell extends Cell {
+
+    public PlantCell(PlantCellBuilder plantCellBuilder) {
+        organelleList = plantCellBuilder.getOrganelleList();
+    }
 }

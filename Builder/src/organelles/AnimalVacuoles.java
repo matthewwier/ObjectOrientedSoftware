@@ -1,12 +1,12 @@
 package organelles;
 
-public class AnimalVacuoles extends Organelle{
+public class AnimalVacuoles extends Organelle {
 
-    public String myFunction(){
+    public String myFunction() {
         return "filled with water";
     }
 
-    public String toString(){
+    public String toString() {
         return "Animal Vacuoles";
     }
 

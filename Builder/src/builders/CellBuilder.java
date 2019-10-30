@@ -14,9 +14,6 @@ public abstract class CellBuilder {
         organelleList.add(new CellNucleus());
     }
 
-    public void showOrganelles() {
-        System.out.println(organelleList.toString());
-    }
 
     public abstract Cell build();
 
@@ -32,7 +29,6 @@ public abstract class CellBuilder {
 
     public abstract CellBuilder setPlantVacuoles(boolean plantVacuoles);
 
-    // cell membrane
     public CellBuilder setCellMembrane(boolean cellMembrane) {
         if (cellMembrane) {
             organelleList.add(new CellMembrane());
@@ -94,8 +90,6 @@ public abstract class CellBuilder {
         }
         return this;
     }
-
-
 
 
 }

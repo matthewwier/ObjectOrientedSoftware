@@ -9,6 +9,6 @@ public class Main {
         builder.setCellMembrane(true);
         builder.setCellNucleus(true);
         AnimalCell animalCell = builder.build();
-        System.out.println(animalCell.showOrganelleList());
+        System.out.println(animalCell);
     }
 }

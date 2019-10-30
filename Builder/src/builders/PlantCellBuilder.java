@@ -1,9 +1,7 @@
 package builders;
 
 import cells.PlantCell;
-import organelles.CellWall;
-import organelles.Chloroplasts;
-import organelles.PlantVacuoles;
+import organelles.*;
 
 public class PlantCellBuilder extends CellBuilder{
 
@@ -16,6 +14,12 @@ public class PlantCellBuilder extends CellBuilder{
     }
 
     public PlantCellBuilder setCellWall(boolean cellWall) {
+        for(Organelle organelle : organelleList){
+            if (organelle instanceof CellWall) {
+                System.out.println("Cell Wall already exists in Plant Cell");
+                return this;
+            }
+        }
         if (cellWall) {
             organelleList.add(new CellWall());
         }

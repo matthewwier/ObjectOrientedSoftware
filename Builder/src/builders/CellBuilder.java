@@ -5,7 +5,7 @@ import organelles.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CellBuilder{
+public abstract class CellBuilder {
     List<Organelle> organelleList;
 
     CellBuilder() {
@@ -16,7 +16,8 @@ public class CellBuilder{
         System.out.println(organelleList.toString());
     }
 
-    public List<Organelle> getOrganelleList(){
+
+    public List<Organelle> getOrganelleList() {
         return this.organelleList;
     }
 
@@ -29,6 +30,12 @@ public class CellBuilder{
     }
 
     public CellBuilder setCellNucleus(boolean cellNucleus) {
+        for(Organelle organelle : organelleList){
+            if (organelle instanceof CellNucleus) {
+                System.out.println("Cell Nucleus already exists in Cell");
+                return this;
+            }
+        }
         if (cellNucleus) {
             organelleList.add(new CellNucleus());
         }
@@ -70,8 +77,8 @@ public class CellBuilder{
         return this;
     }
 
-    public CellBuilder setLysosomes(boolean lisosomes){
-        if(lisosomes){
+    public CellBuilder setLysosomes(boolean lisosomes) {
+        if (lisosomes) {
             organelleList.add(new Lysosomes());
         }
         return this;

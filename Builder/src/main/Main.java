@@ -1,14 +1,21 @@
 package main;
 
 import builders.AnimalCellBuilder;
-import cells.AnimalCell;
+import builders.CellBuilder;
+import builders.PlantCellBuilder;
+import cells.Cell;
 
 public class Main {
     public static void main(String[] args) {
-        AnimalCellBuilder builder = new AnimalCellBuilder();
+        CellBuilder builder = new AnimalCellBuilder();
         builder.setCellMembrane(true);
-        builder.setCellNucleus(true);
-        AnimalCell animalCell = builder.build();
+        Cell animalCell = builder.build();
+
+
+        CellBuilder plantCellBuilder = new PlantCellBuilder();
+        plantCellBuilder.setChloroplasts(true);
+        Cell plantCell = plantCellBuilder.build();
+        System.out.println(plantCell);
         System.out.println(animalCell);
     }
 }

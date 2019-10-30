@@ -1,6 +1,5 @@
 package builders;
 
-import cells.Cell;
 import organelles.*;
 
 import java.util.ArrayList;
@@ -11,23 +10,13 @@ public abstract class CellBuilder {
 
     CellBuilder() {
         organelleList = new ArrayList<>();
-        organelleList.add(new CellNucleus());
+        this.setCellNucleus(true);
     }
 
-
-    public abstract Cell build();
 
     public List<Organelle> getOrganelleList() {
         return this.organelleList;
     }
-
-    public abstract CellBuilder setAnimalVacuoles(boolean animalVacuoles);
-
-    public abstract CellBuilder setCellWall(boolean cellWall);
-
-    public abstract CellBuilder setChloroplasts(boolean chloroplasts);
-
-    public abstract CellBuilder setPlantVacuoles(boolean plantVacuoles);
 
     public CellBuilder setCellMembrane(boolean cellMembrane) {
         if (cellMembrane) {
@@ -39,7 +28,7 @@ public abstract class CellBuilder {
     public CellBuilder setCellNucleus(boolean cellNucleus) {
         for (Organelle organelle : organelleList) {
             if (organelle instanceof CellNucleus) {
-                System.out.println("Cell Nucleus already exists in Cell");
+                System.out.println("Cell Nucleus already exists in Cell. It should be one.");
                 return this;
             }
         }
@@ -90,6 +79,5 @@ public abstract class CellBuilder {
         }
         return this;
     }
-
 
 }

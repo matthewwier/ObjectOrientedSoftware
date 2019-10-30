@@ -19,20 +19,4 @@ public class AnimalCellBuilder extends CellBuilder {
         }
         return this;
     }
-
-    @Override
-    public CellBuilder setCellWall(boolean cellWall) {
-        return this;
-    }
-
-    @Override
-    public CellBuilder setChloroplasts(boolean chloroplasts) {
-        return this;
-    }
-
-    @Override
-    public CellBuilder setPlantVacuoles(boolean plantVacuoles) {
-        return this;
-    }
-
 }

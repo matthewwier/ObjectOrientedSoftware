@@ -2,10 +2,14 @@ package serializers;
 
 import objects.ObjToSerialize;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 public class CSVSerializer implements Serializer {
 
-    public String serialize(ObjToSerialize object) {
+    public void serialize(ObjToSerialize object) {
         StringBuilder sb = new StringBuilder("name, colour, sizes");
         sb.append("\n");
         sb.append(object.getName());
@@ -16,6 +20,19 @@ public class CSVSerializer implements Serializer {
             sb.append(size);
             sb.append(" ");
         }
-        return sb.toString();
+
+        BufferedWriter writer = null;
+        try {
+            writer = new BufferedWriter(new FileWriter("serializedObject"));
+            writer.write(sb.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

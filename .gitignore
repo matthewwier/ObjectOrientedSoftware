@@ -2,3 +2,7 @@
 */target/*
 FactoryMethod.iml
 pom.xml
+*/build/*
+*/gradle/*
+gradlew
+gradlew.bat

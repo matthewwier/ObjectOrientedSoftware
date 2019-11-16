@@ -3,6 +3,7 @@
 FactoryMethod.iml
 pom.xml
 */build/*
+*.gradle
 */gradle/*
 gradlew
 gradlew.bat

@@ -26,8 +26,12 @@ public class XMLSerializer implements Serializer {
         }
         xml.append("</sizes>");
         xml.append("</ObjToSerialize>");
-        BufferedWriter writer = null;
 
+        System.out.println("XML:");
+        System.out.println(xml.toString());
+        System.out.println("Object:");
+
+        BufferedWriter writer = null;
         try {
             writer = new BufferedWriter(new FileWriter("serializedObject"));
             writer.write(xml.toString());

@@ -1,1 +1,1 @@
-{ "name":"tshirt", "colour":"red", "sizes": [ 24.0, 2.5, 4.3 ] }
+<?xml version="1.0" encoding="UTF-8"?><ObjToSerialize><name>cube</name><colour>red</colour><sizes><size>24.0</size><size>2.5</size><size>4.3</size></sizes></ObjToSerialize>

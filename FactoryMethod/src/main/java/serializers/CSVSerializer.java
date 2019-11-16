@@ -21,6 +21,10 @@ public class CSVSerializer implements Serializer {
             sb.append(" ");
         }
 
+        System.out.println("CSV:");
+        System.out.println(sb.toString());
+        System.out.println("Object:");
+
         BufferedWriter writer = null;
         try {
             writer = new BufferedWriter(new FileWriter("serializedObject"));

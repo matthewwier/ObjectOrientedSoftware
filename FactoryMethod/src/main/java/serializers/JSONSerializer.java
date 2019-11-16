@@ -43,6 +43,10 @@ public class JSONSerializer implements Serializer {
         json.append(" ");
         json.append("}");
 
+        System.out.println("JSON:");
+        System.out.println(json.toString());
+        System.out.println("Object:");
+
         BufferedWriter writer = null;
         try {
             writer = new BufferedWriter(new FileWriter("serializedObject"));

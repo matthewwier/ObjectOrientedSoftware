@@ -6,4 +6,5 @@
 - Abstract Factory
 - Factory Method
 - Singleton
+- Bridge
 

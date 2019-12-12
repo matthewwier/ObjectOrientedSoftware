@@ -1,9 +1,14 @@
 package figures;
 
 public class SquareVectorImpl extends Square {
+
+    public SquareVectorImpl(double a) {
+        super(a);
+    }
+
     @Override
-    public int calculate() {
+    public double calculate() {
         System.out.println("Vector implementation.");
-        return a*b;
+        return Math.pow(a,2);
     }
 }

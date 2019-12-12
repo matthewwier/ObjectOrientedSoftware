@@ -11,7 +11,7 @@ public class Calculator implements AbstractCalculator {
     }
 
     @Override
-    public void calculateSurface() {
-        figure.calculate();
+    public double calculateSurface() {
+        return figure.calculate();
     }
 }

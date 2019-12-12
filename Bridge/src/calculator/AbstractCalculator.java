@@ -1,5 +1,5 @@
 package calculator;
 
 interface AbstractCalculator {
-    void calculateSurface();
+    double calculateSurface();
 }

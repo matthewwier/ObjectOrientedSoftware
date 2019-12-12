@@ -1,9 +1,14 @@
 package figures;
 
 public class SquareBitmapImpl extends Square {
+
+    public SquareBitmapImpl(double a) {
+        super(a);
+    }
+
     @Override
-    public int calculate() {
+    public double calculate() {
         System.out.println("Bitmap implementation.");
-        return a*b;
+        return Math.pow(a,2);
     }
 }

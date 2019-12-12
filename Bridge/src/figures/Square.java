@@ -1,6 +1,10 @@
 package figures;
 
 public abstract class Square implements Figure {
-    int a;
-    int b;
+
+    public Square(double a) {
+        this.a = a;
+    }
+
+    double a, b;
 }
